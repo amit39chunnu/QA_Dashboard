@@ -1,0 +1,21 @@
+<aura:component >
+    <div class="my-custom-background">
+        <lightning:button label="Inverse"          variant="inverse" />
+        <lightning:button label="Inverse disabled" variant="inverse" disabled="true"/>
+        <!-- inverse with icons -->
+        <lightning:button label="Icon #1" iconName="utility:download" iconPosition="left"  variant="inverse" />
+        <lightning:button label="Icon #2" iconName="utility:download" iconPosition="right" variant="inverse" />
+        <lightning:button label="Icon #2" iconName="utility:download" iconPosition="right" variant="inverse" disabled="true" />
+    </div>
+   
+    <lightning:card footer="Card Footer" title="Hello">
+      
+        <c:Test_Example />
+        <aura:set attribute="footer">
+            <lightning:badge label="Tag1"/>
+            <lightning:badge label="Tag2"/>
+            <lightning:badge label="Tag3"/>
+        </aura:set>
+    </lightning:card>
+
+</aura:component>

@@ -1,0 +1,8 @@
+<aura:component >
+    <aura:attribute name="myMap" type="Map"  />
+    <aura:attribute name="myList" type="List" />
+    <aura:handler name="init" value="{!this}" action="{!c.show}" />
+    <aura:iteration items="{!v.myList}" var="a">
+    	{!a.key} --{!a.value}
+    </aura:iteration>
+</aura:component>

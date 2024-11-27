@@ -1,0 +1,34 @@
+<aura:component >
+    <lightning:button onclick="{! c.handleShowActiveSectionName }" label="Show Active Section Name"/>
+    <lightning:button onclick="{! c.handleSetActiveSectionC }" label="Open Section C"/>
+
+    <lightning:accordion aura:id="accordion" activeSectionName="B">
+        <lightning:accordionSection name="A" label="Accordion Title A">
+           
+            <aura:set attribute="body">
+               <div>
+                   <lightning:input label="Enter Name" />  <br/><br/>
+                   <lightning:input label="Enter Age" /><br/><br/>
+                   <lightning:input label="Enter Dob" />  <br/><br/>
+                   <lightning:input label="Enter Salary" /><br/><br/>
+               </div>
+            </aura:set>
+        </lightning:accordionSection>
+        <lightning:accordionSection name="B" label="Accordion Title B">
+                 <div>
+                   <lightning:input label="College" />  <br/><br/>
+                   <lightning:input label="Year" /><br/><br/>
+                   <lightning:input label="Zipcode" />  <br/><br/>
+                   <lightning:input label="City" /><br/><br/>
+               </div>
+        </lightning:accordionSection>
+        <lightning:accordionSection name="C" label="Accordion Title C">
+              <div>
+                   <lightning:input label="Exp" />  <br/><br/>
+                   <lightning:input label="Cuurent Salary" /><br/><br/>
+                   <lightning:input label="Expected Salary" />  <br/><br/>
+                   <lightning:input label="Location" /><br/><br/>
+               </div>
+        </lightning:accordionSection>
+    </lightning:accordion>
+</aura:component>

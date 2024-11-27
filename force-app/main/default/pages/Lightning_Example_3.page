@@ -1,0 +1,18 @@
+<apex:page >
+    <apex:includeLightning />
+    <script>
+    	$Lightning.use("c:VF_App_2", function(){
+        	$Lightning.createComponent("c:VF_Comp_2" ,{},"one", 
+                                       	function(cmp){
+                                        	cmp.set("v.branch","SRNagar");
+                                            cmp.set("v.city","HYD");
+                                       	});
+        });
+    </script>
+    <div id="one">
+        
+    </div>
+    <apex:pageBlock title="Example">
+    	This is vf component
+    </apex:pageBlock>
+</apex:page>

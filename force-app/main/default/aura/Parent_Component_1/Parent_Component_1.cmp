@@ -1,0 +1,11 @@
+<aura:component >
+    <div>
+        This is parent component Start  <br/><br/><br/><br/>
+    </div>
+	 <c:Child_Component_1 />
+    <c:Child_Component_2 />
+    <br/><br/><br/><br/>
+     <div>
+        This is parent component End  
+    </div>
+</aura:component>

@@ -1,0 +1,4 @@
+<aura:component >
+    <c:first />
+    <c:second />
+</aura:component>

@@ -1,0 +1,3 @@
+<aura:component implements="force:appHostable" controller="ListView_Example">
+    <lightning:button label="submit" onclick="{!c.gotoURL}" />
+</aura:component>

@@ -1,0 +1,11 @@
+<aura:component >
+	<div>
+        Last Name : Jasti <br/>
+        FirstName : Kalyan<br/>
+        Experience: 5 Years <br/>
+        Technology: SFDC <br/>
+    </div><br/><br/>
+    <c:Education />
+    <br/><br/>
+    <c:PAddress />
+</aura:component>

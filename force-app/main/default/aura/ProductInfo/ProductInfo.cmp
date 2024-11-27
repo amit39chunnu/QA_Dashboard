@@ -1,0 +1,9 @@
+<aura:component >
+    <aura:attribute name="name" type="String" required="true" />
+    <aura:attribute name="quantity" type="Integer" default="10" />
+    <aura:attribute name="Price" type="Decimal" default="0" />
+    Name  : {!v.name} <br/>
+    Quant :{!v.quantity} <br/>
+    Price :{!v.price} <br/><br/>
+    
+</aura:component>

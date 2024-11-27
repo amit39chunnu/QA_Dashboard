@@ -1,0 +1,7 @@
+<aura:component >
+    <c:AuraAction_1 myclick="{!c.callme}" testing="{!c.testMe}" />
+    <aura:attribute name="msg1" type="String" />
+    <aura:attribute name="msg2" type="String" />
+    Message 1: {!v.msg1} <br/><br/>
+    Message 2: {!v.msg2}
+</aura:component>

@@ -1,0 +1,11 @@
+<aura:component implements="force:appHostable" access="global" >
+    <pre>
+        This is component one <br/>
+         This is component one <br/>
+         This is component one <br/>
+         This is component one <br/>
+         This is component one <br/>
+         This is component one <br/>
+    </pre>        
+    <lightning:button variant="brand" label="Go to Component 2" onclick="{!c.NavigatetoC2}" /> 
+</aura:component>

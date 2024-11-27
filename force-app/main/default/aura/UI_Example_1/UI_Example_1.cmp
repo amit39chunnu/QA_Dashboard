@@ -1,0 +1,6 @@
+<aura:component >
+    <aura:attribute name="empName" type="String" />
+    <ui:inputText label="Enter Name" value="{!v.empName}" placeholder="Enter Name" updateon="change"/>
+    <br/><br/>
+    <ui:outputText value="{!v.empName}" />
+</aura:component>

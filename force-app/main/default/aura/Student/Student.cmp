@@ -1,0 +1,7 @@
+<aura:component >
+    <div>
+         Name  : Satish Myla <br/>
+    	 College: CBIT<br/>
+         Location : Gandipet
+    </div>
+</aura:component>

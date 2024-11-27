@@ -1,0 +1,9 @@
+<aura:component implements="force:appHostable" access="global" >
+    <pre>
+        <lightning:card >
+            <lightning:input label="Enter Name" />
+            <lightning:input label="Enter Age" />
+        </lightning:card>
+    </pre>     
+    <lightning:button variant="brand" label="Go to Component 1" onclick="{!c.NavigatetoC1}" />
+</aura:component>

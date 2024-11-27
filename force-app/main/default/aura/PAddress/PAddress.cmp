@@ -1,0 +1,7 @@
+<aura:component >
+	<div>
+        City : Hyd  <br/>
+        Place : SRNagar<br/>
+        State : TG<br/>
+    </div>
+</aura:component>

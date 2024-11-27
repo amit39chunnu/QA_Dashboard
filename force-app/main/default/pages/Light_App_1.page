@@ -1,0 +1,19 @@
+<apex:page >
+    <apex:includeLightning />
+    <script>
+    	 $Lightning.use("c:TestApp_one", function() {
+         	$Lightning.createComponent("ui:button",  {label:"Submit"},"one",  
+                        				function(cmp){
+            								console.log('success');
+            							});
+         
+         });
+    
+    
+    
+          				
+    </script>
+    <div id="one">
+         
+    </div>
+</apex:page>

@@ -1,0 +1,7 @@
+<aura:component implements="force:appHostable" >
+	<div>
+        Name : Wipro <br/>
+        Industry:Banking <br/>
+        Phone :1111
+    </div>
+</aura:component>

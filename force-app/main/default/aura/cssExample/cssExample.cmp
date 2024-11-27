@@ -1,0 +1,7 @@
+<aura:component >
+	<div class="block">
+        Name  : Satish Myla  <br/>
+        Phone : 12345<br/>
+        Age   : 32 <br/>
+    </div>
+</aura:component>

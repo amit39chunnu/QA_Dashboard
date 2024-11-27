@@ -1,0 +1,5 @@
+<aura:component >
+    <aura:handler event="c:Example_Evt" action="{!c.call}" />
+    <aura:attribute name="empName" type="String" />
+    {!v.empName}
+</aura:component>

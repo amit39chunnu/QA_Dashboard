@@ -1,0 +1,35 @@
+<aura:component controller="Account_Data" implements="flexipage:availableForRecordHome,force:hasRecordId">
+    <aura:attribute name="myAccounts" type="Account[]" />
+    <!-- <aura:handler name="init" value="{!this}" action="{!c.invoke}" /> -->
+    <aura:attribute name="simpleRec" type="Object" />
+    <aura:attribute name="acc" type="object" />
+    <force:recordData aura:id="myId"  layoutType="FULL" recordId="{!v.recordId}"
+                      targetFields="{!v.simpleRec}" targetRecord="{!v.acc}" recordUpdated="{!c.invoke}" />
+	
+    <table class="slds-table slds-table_bordered slds-table_cell-buffer">
+   <thead>
+      <tr class="slds-text-title_caps">
+         <th scope="col">
+            <div class="slds-truncate" title="Account Name">Account Name</div>
+         </th>
+         <th scope="col">
+            <div class="slds-truncate" title="Industry ">Industry</div>
+         </th>
+         
+      </tr>
+   </thead>
+   <tbody>
+       <aura:iteration items="{!v.myAccounts}" var="a">
+      <tr>
+         <td data-label="Account Name">
+            <div class="slds-truncate" title="Account Name">{!a.Name}</div>
+         </td>
+         <td data-label="Industry">
+            <div class="slds-truncate" title="Industry">{!a.industry}</div>
+         </td>
+        
+      </tr>
+     </aura:iteration>
+   </tbody>
+</table>
+</aura:component>

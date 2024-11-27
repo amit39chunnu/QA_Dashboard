@@ -1,0 +1,4 @@
+<aura:component >
+    <aura:handler event="c:Test_Event_1" action="{!c.show}" />
+    <aura:attribute name="stdName" type="String" />
+</aura:component>

@@ -1,0 +1,3 @@
+<aura:component >
+    <lightning:dynamicIcon type="ellie" alternativeText="Your calculation is running."/>
+</aura:component>

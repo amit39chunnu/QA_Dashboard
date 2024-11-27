@@ -1,0 +1,10 @@
+<aura:component >
+    <aura:attribute name="empName" type="String" default="Satish Myla"/>
+    <aura:attribute name="age" type="Integer" default="33" />
+    <aura:attribute name="salary" type="Decimal" default="100000" />
+    <div>
+        Name : {!v.empName}<br/><br/>
+        Age  : {!v.age} <br/><br/>
+        Salary:{!v.salary}
+    </div>
+</aura:component>

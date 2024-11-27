@@ -1,0 +1,38 @@
+<aura:component implements="force:appHostable,flexipage:availableForAllPageTypes,flexipage:availableForRecordHome,force:hasRecordId,forceCommunity:availableForAllPageTypes,force:lightningQuickAction" 
+                controller='PaginationController'
+                access="global" >
+    
+    <!-- Attribute Declration For Pagination -->
+    <aura:attribute name="ContactData" type="Object"/>
+    <aura:attribute name="columns" type="List"/>
+    
+    
+    
+     <aura:attribute name="isSending" type="boolean" />
+    
+    <!-- Attribute Declration For Pagination -->
+    <aura:attribute name="PaginationList" type="Contact"/>
+    <aura:attribute name="startPage" type="Integer" />
+    <aura:attribute name="endPage" type="Integer"/>
+    <aura:attribute name="totalRecords" type="Integer"/>
+    <aura:attribute name="pageSize" type="Integer" default="5"/>
+    <!-- Attribute Declration For Pagination End-->
+    
+    <aura:handler name="init" value="{! this }" action="{! c.doInit }"/> 
+    <div class="slds-m-top_medium" >
+        <lightning:datatable data="{! v.PaginationList }" class="slds-m-top_medium"
+                             columns="{! v.columns }" 
+                             keyField="id"
+                             onrowselection="{! c.getSelectedName }"/>	
+        <br/>
+        <lightning:buttonGroup >
+            <lightning:button label="Previous" disabled="{!v.startPage == 0}"  
+                              onclick="{!c.previous}" variant="brand"
+                              iconName='utility:back'/>
+            &nbsp; &nbsp; &nbsp;
+            <lightning:button label="Next" disabled="{!v.endPage >= v.totalRecords}" 
+                              onclick="{!c.next}" variant="brand"
+                              iconName='utility:forward' iconPosition='right'/>
+        </lightning:buttonGroup>
+    </div>
+</aura:component>

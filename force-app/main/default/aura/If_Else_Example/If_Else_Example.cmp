@@ -1,0 +1,9 @@
+<aura:component >
+    <aura:attribute name="booleanFlag" type="boolean" />
+    <aura:if isTrue="{!v.booleanFlag}">
+   	<p>This is True Statement</p>
+    <aura:set attribute="else">
+    <p> This is false Statement</p>
+    </aura:set>
+  </aura:if> 
+</aura:component>

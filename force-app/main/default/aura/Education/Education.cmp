@@ -1,0 +1,7 @@
+<aura:component >
+	<div>
+        Qualfication : MTech <br/>
+        University	 : OU<br/>
+        City		 : HYD<br/>
+    </div>
+</aura:component>

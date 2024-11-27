@@ -1,0 +1,12 @@
+<aura:component implements="force:lightningQuickAction,flexipage:availableForRecordHome,force:hasRecordId" >
+    <aura:attribute name="acc" type="Account" />
+	<aura:handler name="init" value="{!this}" action="{!c.call}" />
+    <force:recordData aura:id="myRec" targetFields="{!v.acc}" fields="Name,Phone,Rating,Ownership" />
+	<lightning:card iconName="standard:account" >
+        <lightning:inputField fieldName="Name"  />
+        <lightning:input label="Account Phone" aura:id="phone" />
+        <lightning:input label="Account Rating" aura:id="rating"  />
+        <lightning:input label="Account Ownership" aura:id="ownership"  />
+        <lightning:button label="submit" onclick="{!c.show}" />
+    </lightning:card>
+</aura:component>

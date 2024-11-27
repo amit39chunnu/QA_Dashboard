@@ -1,0 +1,4 @@
+<aura:component >
+    <aura:attribute name="empName" type="String" />
+    <lightning:button label="submit" onclick="{!c.show}" />
+</aura:component>

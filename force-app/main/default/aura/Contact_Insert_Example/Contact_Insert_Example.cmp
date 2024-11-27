@@ -1,0 +1,42 @@
+<!-- if we want to create a quick action then component should implent : force:lightningQuickAction
+	 Pop-up model will come with header,body and footer 
+	If we dont want to display header and footer for pop-up model we need to implement 
+	force:lightningQuickActionWithoutHeader 
+
+	force:recordId : if you want to capture the id of the record given in the url then component will 
+				 implement force:hasRecordId.
+-->
+<aura:component controller="Contact_Create" implements="force:lightningQuickActionWithoutHeader,force:hasRecordId" >
+    <aura:attribute name="recordId" type="String" />
+    <aura:attribute name="newContact" type="contact" default="{'sobjectType':'Contact','LastName':'','FirstName':'','Phone':'','Email':''}" />
+                  
+    <div class="slds-page-header" role="banner">
+        <h1 class="slds-page-header__title slds-m-right--small
+                   slds-truncate slds-align-left">Create New Contact</h1>
+    </div>
+    <lightning:input aura:id="lName" 
+                     name="LastName" 
+                     label="LastName" 
+                     value="{!v.newContact.LastName}"
+                    />
+    <lightning:input aura:id="fName" 
+                     name="FirstName" 
+                     label="FirstName" 
+                     value="{!v.newContact.FirstName}"
+                     />
+    <lightning:input aura:id="Email"
+                     name="Email Date" 
+                     label="Email"
+                     value="{!v.newContact.Email}" 
+                     Type="email"/>
+    <lightning:input aura:id="Phone" 
+                     name="Phone" 
+                     label="Phone"
+                     value="{!v.newContact.Phone}" />
+                    
+    <lightning:button label="Create " onclick="{!c.createContact}"
+                      class="slds-m-top--medium"/>
+    
+    <lightning:button label="Cancel" onclick="{!c.handleCancel}" class="slds-m-top--medium" />
+    
+</aura:component>

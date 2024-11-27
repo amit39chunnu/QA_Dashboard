@@ -1,0 +1,6 @@
+<aura:component implements="force:lightningQuickAction" >
+	<h1>This is Line one </h1>
+    <h1>This is Line one </h1>
+    <h1>This is Line one </h1>
+    <h1>This is Line one </h1>
+</aura:component>

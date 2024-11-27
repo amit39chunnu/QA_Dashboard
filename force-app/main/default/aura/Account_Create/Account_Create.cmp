@@ -1,0 +1,11 @@
+<aura:component controller="Account_Create">
+    <aura:attribute name="newAcc" type="Account" 
+                    default="{'sobjectType':'Account','Name':'','Phone':'','Industry':'','Type':''}" />
+	<form>
+        <lightning:input label="Accout Name" name="name" value="{!v.newAcc.Name}" aura:id="accform" />
+        <lightning:input label="Phone" name="phone" value="{!v.newAcc.Phone}" aura:id="accform" />
+        <lightning:input label="Industry" name="industry" value="{!v.newAcc.Industry}" aura:id="accform"/>
+        <lightning:input label="Type" name="type" value="{!v.newAcc.Type}" aura:id="accform"/>
+        <lightning:button label="submit" onclick="{!c.call}" />
+    </form>	
+</aura:component>

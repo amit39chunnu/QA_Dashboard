@@ -1,0 +1,33 @@
+<aura:component implements="flexipage:availableForRecordHome,force:hasRecordId">
+    <aura:attribute name="recordId" type="String" />
+    <aura:attribute name="record" type="object" />
+    <aura:attribute name="simpleRec" type="object" />
+    <aura:attribute name="error" type="String" />
+	<force:recordData aura:Id="myRecord" recordId="{!v.recordId}" layoutType="FULL" mode="EDIT" 
+                      targetRecord="{!v.record}" targetFields="{!v.simpleRec}" targetError="{!v.error}" />
+    
+    <!-- Display a lightning card with details about the record -->
+    <div class="Record Details"> 
+        <lightning:card iconName="standard:lead" title="{!v.simpleRec.Name}" >
+            <div class="slds-p-horizontal--small">
+                <p class="slds-text-heading--small">
+                    <lightning:input label="Name" value="{!v.simpleRec.Name}" />
+                </p>
+                <p class="slds-text-heading--small">
+                    <lightning:input label="Phone" value="{!v.simpleRec.Phone}" />
+                </p>
+                 <p class="slds-text-heading--small">
+                    <lightning:input label="Email" value="{!v.simpleRec.Email}" />
+                </p>
+                <p>
+                    <lightning:button label="submit" onclick="{!c.show}" variant="brand" />
+                </p>
+            </div>
+        </lightning:card>
+    </div> 
+    <!-- Display Lightning Data Service errors, if any -->
+    <aura:if isTrue="{!not(empty(v.error))}">
+        <div class="Error">
+            {!v.error}</div>
+    </aura:if>
+</aura:component>

@@ -1,0 +1,9 @@
+<aura:component >
+    <aura:attribute name="empName" type="String" />
+    <aura:attribute name="salary" type="Decimal" />
+    <c:Test_One empName="{!v.empName}" salary="{!v.salary}" />
+    <div>
+        Name : {!v.empName}<br/><br/>
+        Salary:{!v.salary}
+    </div>
+</aura:component>

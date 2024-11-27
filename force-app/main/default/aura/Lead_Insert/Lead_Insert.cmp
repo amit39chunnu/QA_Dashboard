@@ -1,0 +1,12 @@
+<aura:component controller="Account_Insert_1" implements="flexipage:availableForRecordHome">
+    <aura:attribute name="leads" type="Lead" default="{'sobjectType':'Lead','LastName':'','Company':'','Phone':''}"  />
+    <aura:attribute name="result" type="Lead" />
+    <form>
+        <lightning:input type="Text" label="Last Name" name="lastname" value="{!v.leads.LastName}" />
+        <lightning:input type="Text" label="Company" name="company" value="{!v.leads.Company}" />
+        <lightning:input type="Text" label="Phone" name="Phone" value="{!v.leads.Phone}" />
+        <lightning:button label="Create" onclick="{!c.invoke}" />
+        <aura:text value="{!v.result.Id}" />                
+    </form>
+    
+</aura:component>

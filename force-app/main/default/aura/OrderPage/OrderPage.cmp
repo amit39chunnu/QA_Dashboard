@@ -1,0 +1,14 @@
+<aura:component >
+    <aura:attribute name="Name" type="string" />
+    <aura:attribute name="Price" type="Integer" />
+    <aura:attribute name="quant" type="Integer" />
+    <aura:attribute name="total" type="Integer" />
+    <aura:handler name="init" value="{!this}" action="{!c.calc}" />
+    <div class="block">
+        Name  :{!v.Name} <br/>
+        Price :{! v.Price}<br/>
+        Quant :{! v.quant} <br/>
+        Total :{!v.total}
+                              
+    </div>
+</aura:component>

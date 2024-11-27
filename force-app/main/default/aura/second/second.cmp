@@ -1,0 +1,9 @@
+<aura:component >
+    <aura:attribute name="testing" type="String" />
+    <aura:handler event="c:secondEvent" action="{!c.invoke}" />
+    <div class="box">
+    	This is second Component
+        {!v.testing}
+    </div>
+    
+</aura:component>

@@ -1,0 +1,16 @@
+<aura:component >
+	<lightning:input type="checkbox-button" label="Red" name="red" checked="true"/>
+	<lightning:input type="checkbox-button" label="Blue" name="blue" />
+    <lightning:input type="color" label="Color" name="color" value="#EEEEEE"/>
+    <lightning:input type="date" label="Birthday" name="date" />
+    <lightning:input type="datetime-local" label="Birthday" name="datetime" />
+    <lightning:input type="email" label="Email" name="email" value="abc@domain.com" />
+    <lightning:input type="file" label="Attachment" name="file" multiple="true" accept="image/png, .zip" onchange="{! c.handleFilesChange }"/>
+    <lightning:input type="month" label="Birthday" name="month" />
+    <lightning:input type="radio" label="Red" name="red" value="red" checked="true" />
+	<lightning:input type="radio" label="Blue" name="blue" value="blue" />
+    <lightning:input type="range" label="Number" name="number" min="0" max="10" />
+    <lightning:input type="tel" label="Telephone" name="tel" value="343-343-3434" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}"/>
+    <lightning:input type="toggle" label="Toggle value" name="togglevalue" checked="true" />
+
+</aura:component>

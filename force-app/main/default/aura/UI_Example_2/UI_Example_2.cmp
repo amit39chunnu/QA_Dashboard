@@ -1,0 +1,41 @@
+<aura:component >
+   <!-- <aura:attribute name="aval" type="Integer" />
+     <aura:attribute name="bval" type="Integer" />
+     <aura:attribute name="cval" type="Integer" /> -->
+    <ui:inputText label="Enter AVal"  aura:id="aval" />
+    <ui:inputText label="Enter BVal"  aura:id="bval" />
+    <ui:inputText label="Sum of "  aura:id="cval" />
+    <ui:button label="submit" press="{!c.show}" />
+    <ui:inputTextArea label="Address " rows="5" />
+    <ui:inputRadio label="Selected"  />
+     <ui:inputRadio label="Not-Selected"  />
+    =================================================
+    <p><ui:outputText class="result" aura:id="radioResult" value="" /></p>
+
+   <b>Radio Buttons - Group</b>
+   <ui:inputRadio aura:id="r0" name="others" label="Prospecting" change="{!c.onGroup}"/>
+   <ui:inputRadio aura:id="r1" name="others" label="Qualification" change="{!c.onGroup}" value="true"/>
+   <ui:inputRadio aura:id="r2" name="others" label="Needs Analysis" change="{!c.onGroup}"/>
+   <ui:inputRadio aura:id="r3" name="others" label="Closed Lost" change="{!c.onGroup}"/>
+   <b>Selected Items:</b>
+   <p><ui:outputText class="result" aura:id="radioGroupResult" value="" /></p>
+    =============================================
+    <div class="row">
+<p class="title">Single Selection</p>
+<ui:inputSelect class="single" aura:id="InputSelectSingle" change="{!c.onSingleSelectChange}">
+
+            <ui:inputSelectOption text="Any"/>
+            <ui:inputSelectOption text="Open" value="true"/>
+            <ui:inputSelectOption text="Closed"/>
+            <ui:inputSelectOption text="Closed Won"/>
+        	<ui:inputSelectOption text="Prospecting"/>
+            <ui:inputSelectOption text="Qualification"/>
+            <ui:inputSelectOption text="Needs Analysis"/>
+            <ui:inputSelectOption text="Closed Lost"/>
+    </ui:inputSelect>
+    <p>Selected Item:</p>
+      <p><ui:outputText class="result" aura:id="singleResult" value="" /></p>
+</div>    
+
+   
+</aura:component>

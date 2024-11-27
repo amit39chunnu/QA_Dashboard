@@ -1,0 +1,6 @@
+<aura:component >
+    <aura:attribute name="myclick" type="Aura.Action"  />
+    <aura:attribute name="testing" type="Aura.Action" />
+    <lightning:button label="Button1" onclick="{!v.myclick}" />
+    <ui:button label="Button2" press="{!v.testing}" />
+</aura:component>

@@ -1,0 +1,34 @@
+<aura:component controller="ContactCreate" implements="force:lightningQuickActionWithoutHeader,force:hasRecordId" >
+    <aura:attribute name="recordId" type="String" />
+    <aura:attribute name="newContact" type="contact"  />
+                  
+    <div class="slds-page-header" role="banner">
+        <h1 class="slds-page-header__title slds-m-right--small
+                   slds-truncate slds-align-left">Create New Contact</h1>
+    </div>
+    <lightning:input aura:id="lName" 
+                     name="LastName" 
+                     label="LastName" 
+                     value="{!v.newContact.LastName}"
+                    />
+    <lightning:input aura:id="fName" 
+                     name="FirstName" 
+                     label="FirstName" 
+                     value="{!v.newContact.FirstName}"
+                     />
+    <lightning:input aura:id="Email"
+                     name="Email Date" 
+                     label="Email"
+                     value="{!v.newContact.Email}" 
+                     Type="email"/>
+    <lightning:input aura:id="Phone" 
+                     name="Phone" 
+                     label="Phone"
+                     value="{!v.newContact.Phone}" />
+                    
+    <lightning:button label="Create " onclick="{!c.createContact}"
+                      class="slds-m-top--medium"/>
+    
+    <lightning:button label="Cancel" onclick="{!c.handleCancel}" class="slds-m-top--medium" />
+    
+</aura:component>

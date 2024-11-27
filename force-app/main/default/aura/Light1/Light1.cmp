@@ -1,0 +1,8 @@
+<aura:component >
+    <lightning:tabset >
+		<lightning:tab label="Tab 1">
+			Hello world!
+		</lightning:tab>
+	</lightning:tabset>
+
+</aura:component>

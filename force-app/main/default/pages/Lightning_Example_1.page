@@ -1,0 +1,18 @@
+<apex:page >
+    <apex:includeLightning />
+    <script>
+    	$Lightning.use("c:VF_App_1", function(){
+        	$Lightning.createComponent("c:VF_Comp_1",{empName :"Kiran Kumar" ,age : 40 ,salary:10000},"box",function(cmp){});
+        });
+    </script>
+    <div id="box">
+        
+        
+    </div>
+    <apex:form >
+    <apex:pageBlock title="Example" >
+        Enter Name :<Apex:inputText />
+        <apex:commandButton value="Submit" />
+    </apex:pageBlock>
+   </apex:form>
+</apex:page>

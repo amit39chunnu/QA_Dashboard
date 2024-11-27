@@ -1,0 +1,11 @@
+<aura:component >
+    <aura:attribute name="empName" type="String" />
+    <aura:attribute name="branch" type="String" />
+    <aura:attribute name="city" type="String" />
+    <ui:button label="Press Me" press="{!c.call}" />
+    <div class="box">
+    	Name : {!v.empName} <br/><br/>
+    	Branch:{!v.branch} <br/><br/>
+    	City  :{!v.city} 
+    </div>
+</aura:component>

@@ -1,0 +1,5 @@
+<aura:component >
+    <aura:registerEvent name="myEvent" type="c:FirstEvent" />
+    <lightning:button label="Submit" variant="brand" onclick="{!c.show}" />
+    <lightning:button label="Cancel" variant="brand" onclick="{!c.create}" />
+</aura:component>

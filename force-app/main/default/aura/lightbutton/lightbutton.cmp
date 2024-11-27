@@ -1,0 +1,9 @@
+<aura:component >
+    
+    <lightning:button label="cancel" variant="destructive" iconName="utility:close" onclick="{!c.cancel}"/>
+    <lightning:button label="download" iconName="utility:download" onblur="{!c.cancel}"/>
+     <lightning:button label="upload" variant="brand" iconName="utility:upload" onclick="{!c.cancel}"/>
+     <lightning:button label="call" variant="success" iconName="utility:call" onclick="{!c.cancel}"/>
+    <lightning:icon iconName="utility:error" variant="error"/>
+
+</aura:component>

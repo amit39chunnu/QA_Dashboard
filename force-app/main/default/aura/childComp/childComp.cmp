@@ -1,0 +1,4 @@
+<aura:component extends="c:parentComp">
+    <aura:set attribute="empName" value="Satish Myla" />
+    <aura:set attribute="salary" value="10000" />
+</aura:component>

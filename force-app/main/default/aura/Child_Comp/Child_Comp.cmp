@@ -1,0 +1,4 @@
+<aura:component extends="c:Parent_Comp">
+    <aura:set attribute="empName" value="Satish Myla" />
+	This is child Component :{!v.body}
+</aura:component>

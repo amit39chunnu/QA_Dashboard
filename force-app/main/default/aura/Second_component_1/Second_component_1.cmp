@@ -1,0 +1,6 @@
+<aura:component >
+    <aura:registerEvent name="abc" type="c:Second_Event"  />
+    <lightning:input label="Name" name="Name" aura:id="name" />
+    <lightning:input label="City" name="City" aura:id="city" />
+    <lightning:button label="submit" onclick="{!c.submit}" />
+</aura:component>

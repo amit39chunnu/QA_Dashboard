@@ -1,0 +1,6 @@
+<aura:component >
+    <div class="box">
+    	 <lightning:button label="submit" onclick="{!c.show}" />
+    </div>
+   
+</aura:component>

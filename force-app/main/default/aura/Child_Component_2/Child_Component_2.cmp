@@ -1,0 +1,6 @@
+<aura:component >
+    This is child 2 <br/><br/><br/><br/>
+    <aura:handler event="c:First_Event" action="{!c.invoke}" />
+    <aura:attribute name="Name" type="String" />
+    Name :{!v.Name}
+</aura:component>

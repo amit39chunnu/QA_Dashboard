@@ -1,0 +1,11 @@
+<aura:component >
+    <aura:attribute name="empNames" type="String[]" default="['sam','Ram','Kiran','Hari']" />
+	<aura:iteration items="1,2,3,4,5" var="a">
+        <h1>{!a}</h1>
+    </aura:iteration>
+    <br/><br/>
+    <aura:iteration items="{!v.empNames}" var="b" >
+    	<p>{!b}</p>
+    </aura:iteration>
+    <aura:text value="This is a text message" />
+</aura:component>

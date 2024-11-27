@@ -1,0 +1,3 @@
+<aura:component >
+    <c:Main_Component />
+</aura:component>

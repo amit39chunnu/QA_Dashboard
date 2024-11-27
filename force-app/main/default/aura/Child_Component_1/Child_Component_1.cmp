@@ -1,0 +1,6 @@
+<aura:component >
+    <aura:registerEvent name="myEvent" type="c:First_Event" /> <!-- name :It can be any name , type : event Name -->
+    <lightning:input label="Last Name" name="Last Name" aura:id="lname" />
+    <lightning:input label="First Name" name="First Name" aura:id="fname" />
+    <lightning:button label="submit" onclick="{!c.show}" />
+</aura:component>

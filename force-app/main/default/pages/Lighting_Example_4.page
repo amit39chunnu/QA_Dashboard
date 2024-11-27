@@ -1,0 +1,37 @@
+<apex:page standardController="Lead">
+    <apex:includeScript value="/lightning/lightning.out.js" />
+ 
+    <script>
+    /*  $Lightning.use("c:leadDataApp", function() {
+            $Lightning.createComponent(
+                "c:leadData",
+                {},
+                "theLead",
+                function(cmp) {
+                    console.log("Component created!");
+                    console.log(cmp);
+                });
+            });
+    */
+    $Lightning.use("c:leadDataApp", function() {
+    $Lightning.createComponent(
+        "c:leadData",
+         { theLead: {
+              sobjectType: "Lead",
+              Company: "{!JSENCODE(Lead.Company)}",
+              FirstName: "{!JSENCODE(Lead.FirstName)}",
+              LastName: "{!JSENCODE(Lead.LastName)}",
+              Email: "{!JSENCODE(Lead.Email)}",
+              Id: {!ISBLANK(Lead.Id)} ? null : "{!Lead.Id}"
+          }
+        },
+        "theLead",
+        function(cmp) {
+            console.log("Component created!");
+            console.log(cmp);
+        });
+    });
+    </script>
+    
+    <div id="theLead"></div>
+</apex:page>

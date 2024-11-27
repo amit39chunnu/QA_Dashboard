@@ -1,0 +1,6 @@
+<aura:component >
+	<div>
+        This is block1 <br/>
+        This is block2
+    </div>
+</aura:component>

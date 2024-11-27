@@ -1,0 +1,5 @@
+<aura:component >
+    <aura:attribute name="empName" type="String" />
+    <c:Child_One empName="{!v.empName}"/>
+    MyName : {!v.empName}
+</aura:component>

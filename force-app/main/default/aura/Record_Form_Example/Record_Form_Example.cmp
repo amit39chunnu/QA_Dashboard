@@ -1,0 +1,10 @@
+<aura:component >
+    <aura:attribute name="myFields" type="String[]" default="['Name','Phone','Industry','Rating','OwnerShip']" />
+	<lightning:recordForm 
+         objectApiName="Account" 
+         layoutType="Compact" 
+         fields="{!v.myFields}"
+         columns="2"
+         mode="edit"
+         onsubmit="{!c.handleSubmit}" />
+</aura:component>

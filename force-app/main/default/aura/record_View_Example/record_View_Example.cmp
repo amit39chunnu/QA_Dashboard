@@ -1,0 +1,26 @@
+<aura:component >
+    <lightning:recordViewForm recordId="0017F00000iBvgj" objectApiName="Account">
+        <div class="slds-box">
+            <lightning:outputField fieldName="Name" />
+            <lightning:outputField fieldName="Industry" />
+            <lightning:outputField fieldName="Phone" />
+            <lightning:outputField fieldName="Rating" />
+        </div>
+    </lightning:recordViewForm>
+    <lightning:recordViewForm recordId="0017F00000iBvgj" objectApiName="Account">
+    <div class="slds-grid">
+        <div class="slds-col">
+           <lightning:outputField fieldName="Name" />
+        </div>
+        <div class="slds-col ">
+           <lightning:outputField fieldName="Industry" />
+        </div>
+         <div class="slds-col">
+            <lightning:outputField fieldName="Phone" />
+        </div>
+        <div class="slds-col">
+           <lightning:outputField fieldName="Rating" />
+        </div>
+    </div>
+</lightning:recordViewForm>
+</aura:component>

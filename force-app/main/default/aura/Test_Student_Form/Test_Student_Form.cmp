@@ -1,0 +1,5 @@
+<aura:component >
+    <aura:registerEvent name="test" type="c:Test_Event_1" />
+    <lightning:input label="Name" name="name" aura:id="name" />
+    <lightning:button label="Submit" onclick="{!c.show}" />
+</aura:component>

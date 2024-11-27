@@ -1,0 +1,11 @@
+<aura:component >
+<div class="slds-panel slds-size_medium slds-panel_docked slds-panel_docked-left slds-is-open" aria-hidden="false">
+<div class="slds-panel__header">
+<h2 class="slds-panel__header-title slds-text-heading_small">Panel Header
+    <lightning:icon iconname="standard:account" />
+    </h2>
+
+</div>
+<div class="slds-panel__body">A panel body accepts any layout or component</div>
+</div>
+</aura:component>

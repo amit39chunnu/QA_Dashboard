@@ -1,0 +1,30 @@
+<aura:component implements="flexipage:availableForAllPageTypes,flexipage:availableForRecordHome,force:hasRecordId" access="global" >
+	<!-- flexipage:availablForRecordHome :
+		  If this interface is implemented then we can embeed this component on the home page of 
+		  the record
+	      force:hasRecordId : 
+		  This will ensure that record id is passed in the url
+	-->
+    <aura:attribute name="recordId" type="String" />
+    <aura:attribute name="myRecord" type="Object" />
+     <aura:attribute name="record" type="Object" />
+    <aura:attribute name="error" type="String" />
+    <force:recordData recordId="{!v.recordId}"  mode="EDIT" layoutType="FULL" fields="Name,StageName,CloseDate" 
+                     targetRecord="{!v.record}" targetFields="{!v.myRecord}"  targetError="{!v.error}" />
+     <div class="Record Details"> 
+    <lightning:card iconName="standard:opportunity" title="{!v.myRecord.Name}" >
+        <div class="slds-p-horizontal--small">
+            <p class="slds-text-heading--small">
+                <lightning:input label="Name" value="{!v.myRecord.Name}" />
+            </p>
+            <p class="slds-text-heading--small">
+                <lightning:input label="Stage Name" value="{!v.myRecord.StageName}" />
+            </p>
+             <p class="slds-text-heading--small">
+                <lightning:input label="Close Date" value="{!v.myRecord.closeDate}" />
+            </p>
+        </div>
+    </lightning:card>
+    </div>
+       
+</aura:component>

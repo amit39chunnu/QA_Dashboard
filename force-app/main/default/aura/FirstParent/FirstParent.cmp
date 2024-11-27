@@ -1,0 +1,5 @@
+<aura:component >
+    <aura:handler name="myEvent" event="c:FirstEvent" action="{!c.invoke}" />
+    <c:ChildCompOne />
+    <c:ChildCompTwo />
+</aura:component>

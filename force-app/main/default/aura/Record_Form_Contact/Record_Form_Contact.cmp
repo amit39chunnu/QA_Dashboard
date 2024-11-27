@@ -1,0 +1,14 @@
+<aura:component implements="flexipage:availableForRecordHome,force:hasRecordId" access="global" >
+     <aura:attribute name="myFields" type="String[]" default="['Name','Phone','Industry','Rating','OwnerShip']" />
+	<lightning:card iconName="standard:account" title="Account">
+    	 
+	<lightning:recordForm 
+         objectApiName="Account" 
+         
+         fields="{!v.myFields}"
+         columns="1"
+         mode="edit"
+         onsuccess="{!c.show}" />
+    
+    </lightning:card>
+</aura:component>

@@ -1,0 +1,65 @@
+<template>
+  <lightning-card>
+      <div class="slds-p-horizontal_small">
+          <template if:true={dataLoaded}>
+              <form>
+                  <lightning-layout vertical-align="start" spacing="small">
+                      <lightning-layout-item size="12">
+                          <p class="bold-text">Q.{index} :</p>
+                          <p class="bold-text">{data.questionText}</p>
+                      </lightning-layout-item>
+                      <template for:each={data.options} for:item="option">
+                          <lightning-input 
+                              type="checkbox" 
+                              data-id={option.Id} 
+                              key={option.Id} 
+                              label={option.optionText} 
+                              checked={option.isChecked} 
+                              value={option.isCorrect} 
+                              onchange={handleChange}>
+                          </lightning-input>
+                      </template>
+                      <lightning-input 
+                          name="markForReview" 
+                          type="toggle" 
+                          label="Mark For Review" 
+                          class="slds-float_left" 
+                          checked={data.isRMQ} 
+                          onchange={handleMFRToggle}>
+                      </lightning-input>
+                  </lightning-layout>
+              </form>
+          </template>
+
+          <template if:true={RMQLoad}>
+              <div class="slds-text-align_center">
+                  <p>Review Question</p>
+              </div>
+              <template for:each={items} for:item="item">
+               <!--   <a href={url} key={item.Id} onclick={handleClickRMQ}>{item.Name} <br/></a> 
+                  -->
+              </template>
+          </template>
+
+          <template if:true={loadFinish}>
+              <lightning-button label="Review Mark Question" onclick={handleRMQ}></lightning-button>
+              <lightning-button label="Submit" variant="brand" disabled={disableSubmit} onclick={handleSubmit}></lightning-button>
+          </template>
+
+          <template if:true={loadShow}>
+              <div class="slds-box slds-box_small">
+                  <p>You have completed the Mock Test, Please see your evaluation detail below:</p>
+                  <p><strong>Your Score: {countCorrectAns}/{totalRecountCount} ({percentageOfAns}%)</strong></p>
+                  <lightning-button label="Show Evaluation"></lightning-button>
+                  <lightning-button label="Email Evaluation"></lightning-button>
+              </div>
+          </template>
+      </div>
+      <div slot="footer">
+          <lightning-button label="Previous" onclick={previousHandler} disabled={disablePrevious}></lightning-button>
+          <b> Question ({index} / {totalRecountCount}) </b>
+          <lightning-button label="Next" onclick={nextHandler} disabled={disableNext}></lightning-button>
+          <lightning-button label="Finish" variant="brand" class="slds-float_right" disabled={disableFinish} onclick={handleFinish}></lightning-button>
+      </div>
+  </lightning-card>
+</template>

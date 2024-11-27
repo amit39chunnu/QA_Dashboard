@@ -1,0 +1,15 @@
+<aura:component >
+   
+    <ltng:require scripts="{!$Resource.Test}"></ltng:require>
+    <aura:attribute name="externalList" type="Array" ></aura:attribute>
+    <div>
+        <p> Click on button to show the name of fruits...</p>
+        <lightning:button label="Show Fruits"
+                          variant="brand"
+                          onclick="{!c.getFruits}">
+        </lightning:button>
+        <aura:iteration items="{!v.externalList}" var="el">
+            <p> {!el}</p>
+        </aura:iteration>
+    </div>
+</aura:component>

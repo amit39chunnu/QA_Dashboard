@@ -1,0 +1,11 @@
+<aura:component extends="c:TExample2" >
+    <aura:set attribute="name" > This is example </aura:set>
+     <lightning:card title="Card Header" iconName="standard:account" footer="Card Footer">
+        <aura:set attribute="actions">
+            <lightning:button label="New"/>
+        </aura:set>
+        <p class="slds-p-horizontal_small">
+            Card Body
+        </p>
+    </lightning:card>
+</aura:component>

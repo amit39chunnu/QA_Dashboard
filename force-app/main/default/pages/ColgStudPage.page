@@ -1,0 +1,28 @@
+<apex:page controller="ColgStudPageController">
+    <apex:form >
+        <apex:pageBlock title="College">
+            <apex:pageMessages ></apex:pageMessages>
+            <apex:pageBlockSection >
+            	<apex:outputField value="{!colg.Name}"/>
+                <apex:outputField value="{!colg.Address__c}"/>
+                <apex:outputField value="{!colg.University__c}"/>
+            </apex:pageBlockSection>
+        	<apex:commandButton value="Add Student" action="{!save}"/>
+            
+            <apex:pageBlockTable value="{!studList}" var="row">
+                <apex:column >
+                    <apex:outputLink title="" value="/{!row.id}/e?retURL=/apex/{!$CurrentPage.Name}" style="font-weight:bold">Edit</apex:outputLink>&nbsp;|&nbsp;
+                    <apex:commandLink action="{!DeleteStudent}" reRender="form" value="Delete">
+                        <apex:param name="studentid" value="{!row.Id}" assignTo="{!SelectedStudentId}"/>
+                    </apex:commandLink>
+                    <!--<a href="javascript&colon;if (window.confirm('Are you sure?')) DeleteStudent('{!row.Id}');" style="font-weight:bold">Del</a>-->
+                </apex:column>
+                <apex:column value="{!row.Name}"/>
+                <apex:column value="{!row.Email__c}"/>
+                <apex:column value="{!row.Branch__c}"/>
+                <apex:column value="{!row.College__c}"/>
+                
+            </apex:pageBlockTable>
+        </apex:pageBlock>
+    </apex:form>
+</apex:page>

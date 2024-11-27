@@ -1,0 +1,6 @@
+<aura:component extensible="true">
+    <aura:attribute name="empName" type="String" />
+    <aura:attribute name="salary" type="Decimal" />
+    Your Name : {!v.empName}
+    Your Salary:{!v.salary}
+</aura:component>

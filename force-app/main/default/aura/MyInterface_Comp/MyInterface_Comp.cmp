@@ -1,0 +1,4 @@
+<aura:component implements="c:MyInterface">
+    <aura:attribute name="age" type="Integer" default="10" />
+    {!v.age}
+</aura:component>

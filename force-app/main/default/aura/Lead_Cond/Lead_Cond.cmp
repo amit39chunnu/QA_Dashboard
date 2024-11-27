@@ -1,0 +1,33 @@
+<!-- if you want to override the standard functionality ,component has to implement  lightning:actionoverride interface -->
+<aura:component implements="flexipage:availableForRecordHome,force:hasRecordId,lightning:actionOverride" access="GLOBAL">
+    <!-- Create an attribute with name "options" to sync the data between Lead_Field_Exam options attirbute -->
+    <aura:attribute name="options" type="object" />
+    
+    <aura:attribute name="newLead" type="Lead" />
+    <aura:attribute name="message" type="String" />
+    <c:Lead_Field_Exam options ="{!v.options}" objName="Lead" fieldName="Rating" />
+    <!-- Because we are trying to override the Standard Functionality we need to use recordData -->
+    <force:recordData aura:id="myId" recordId="{!v.recordId}" 
+                      fields="LastName,FirstName,Company,Rating"
+                      targetFields="{!v.newLead}"
+                      mode="EDIT" 
+                      targetError="{!v.message}" />
+    
+                      <!-- we can use fields or Layout 
+						   we can use targetRecord or TargetFields
+						-->
+    <!-- we are invoking the hanler to intialize the sobject lead with newRecord for recordData -->
+    <aura:handler name="init" value="{!this}" action="{!c.invoke}" />   
+    <!-- This is lightnign form to read the inputs from the users -->
+    <lightning:input label="LastName" name="LastName" aura:id="lanme" value="{!v.newLead.LastName}"/>
+    <lightning:input label="FirstName" name="FirstName" aura:id="fname"  value="{!v.newLead.FirstName}"/>
+    <lightning:input label="Company" name="company" aura:id="company" value="{!v.newLead.Company}"/>
+    <!-- we are creation options for the picklist based on the options we have recevied from the controller -->
+	<lightning:select label="Rating" Name="Rating" aura:id="rating" value="{!v.newLead.rating}">
+    	<option value="none">-None-</option>
+        <aura:iteration items="{!v.options}" var="a">
+        	<option value="{!a}">{!a}</option>
+        </aura:iteration>
+    </lightning:select>
+    <lightning:button label="save" onclick="{!c.save}" />
+</aura:component>

@@ -1,0 +1,8 @@
+<aura:component implements="force:hasRecordId,flexipage:availableForRecordHome" controller="Contact_Fetch_Example">
+    <aura:attribute name="newRecord" type="Object" />
+    <aura:attribute name="myContact" type="Contact[]" />
+    <force:recordData  targetFields="{!v.newRecord}" fields="name,industry,phone" recordId="{!v.recordId}" recordUpdated="{!c.invoke}" />
+   <lightning:card >
+       <lightning:icon iconNar="standard:contact" />
+    </lightning:card>
+</aura:component>

@@ -1,0 +1,14 @@
+<aura:component >
+    <aura:attribute name="aval" type="Integer" />
+    <aura:attribute name="bval" type="Integer" />
+    <aura:attribute name="cval" type="Integer" />
+    <aura:handler name="init" value="{!this}" action="{!c.initfun}" />
+    <lightning:button label="add" onclick="{!c.invoke}" /> 
+    <lightning:button label="mul" onclick="{!c.invoke}" /> 
+    <lightning:button label="cancel" onclick="{!c.invoke}" /> 
+    <div class="box">
+        AVal : {!v.aval} <br/><br/>
+        BVal :{!v.bval} <br/><br/>
+        CVal :{!v.cval} 
+    </div>
+</aura:component>

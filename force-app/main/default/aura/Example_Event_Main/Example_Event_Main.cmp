@@ -1,0 +1,4 @@
+<aura:component >
+    <c:Example_Event_1 />
+    <c:Example_Event_2 />
+</aura:component>

@@ -1,0 +1,6 @@
+<aura:component >
+    <c:CapitalChild />
+    <aura:handler name="first" event="c:CapitalEvent" action="{!c.show}"/>
+    <aura:attribute name="res" type="String" />
+    {!v.res}
+</aura:component>
